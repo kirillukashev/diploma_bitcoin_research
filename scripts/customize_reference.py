@@ -82,9 +82,11 @@ def set_paragraph_format(
         if qn("w:left") in ind.attrib:
             del ind.attrib[qn("w:left")]
     else:
-        for a in ("w:firstLine", "w:left", "w:hanging"):
-            if qn(a) in ind.attrib:
-                del ind.attrib[qn(a)]
+        # Явно нулевой отступ — иначе пустой <w:ind/> не перекрывает firstLine из Normal
+        ind.set(qn("w:firstLine"), "0")
+        ind.set(qn("w:left"), "0")
+        if qn("w:hanging") in ind.attrib:
+            del ind.attrib[qn("w:hanging")]
 
     spacing = para_props.find(qn("w:spacing"))
     if spacing is None:
