@@ -4,40 +4,42 @@ title: "A Bayesian approach for the determinants of bitcoin returns"
 citation_short: "Stengos T., Panagiotidis T., Papapanagiotou G. (2023)"
 group: volatility
 pdf: "../../.local/articles/2023_Stengos_bayesian_btc_returns.pdf"
-core: false  # отметить true, если статья войдёт в основной список (≥10 шт.)
+core: false
 ---
 
-# Stengos T., Panagiotidis T., Papapanagiotou G. (2023) — A Bayesian approach for the determinants of bitcoin returns
+# Stengos, Panagiotidis, Papapanagiotou (2023) — Bayesian LASSO для доходности BTC
 
-**PDF:** [`.local/articles/2023_Stengos_bayesian_btc_returns.pdf`](../../.local/articles/2023_Stengos_bayesian_btc_returns.pdf)
-**Тематическая группа:** `volatility` (см. `docs/articles/README.md`).
-
-## Аннотация (из метаданных PDF)
-
-Байесовский подход к моделированию доходности BTC. Discussion Paper Гуэлфского университета.
+**PDF:** [`.local/articles/2023_Stengos_bayesian_btc_returns.pdf`](../../.local/articles/2023_Stengos_bayesian_btc_volatility.pdf)
+**Источник:** Discussion Paper 2023-02, University of Guelph.
+**Тематическая группа:** `volatility`
 
 ## Тип работы
 
-<!-- empirical / theoretical / survey / review -->
+Эмпирическая; отбор переменных методами байесовской регуляризации.
 
 ## Вопрос исследования
 
-<!-- 1-2 предложения, что именно изучают авторы -->
+Из 31 переменной четырёх групп (финансовые, технологические, неопределённость, внимание) — какие определяют доходность BTC на периоде 2015–2021?
 
 ## Метод
 
-<!-- регрессия / GARCH / quantile / event-study / GMM / Bayesian / ... -->
-<!-- частота данных, выборка, период -->
+– Байесовская LASSO модель со стохастической волатильностью и эффектом левериджа.
+– 31 переменная: рыночные доходности, волатильности, технологические факторы (хэшрейт, сложность майнинга), индексы CBDC-неопределённости, внимание (Wikipedia, Google, Twitter).
+– Ежедневные данные, 2015–2021.
 
 ## Ключевые результаты
 
-<!-- что нашли (3-5 пунктов) -->
+– Сентимент и технологические факторы оказывают наибольшее влияние на доходность BTC.
+– Из финансовых/экономических переменных: доходность фондового рынка и индексы волатильности (VIX) — наибольший эффект.
+– CBDC-индексы неопределённости/внимания также значимы.
+– Байесовский LASSO превосходит частотный LASSO в устранении смещения при отборе переменных.
 
 ## Цитата для главы 1
 
-<!-- 1-2 предложения цитаты для использования при написании обзора -->
+> «Sentiment and technological factors have the most profound effect on bitcoin returns. Regarding economic/financial variables, stock market returns and volatility indices have the greatest impact.»
 
 ## Связь с нашей работой
 
-<!-- какую гипотезу/блок главы поддерживает или опровергает -->
-<!-- какие переменные пересекаются с нашими -->
+– Подтверждает значимость **сентимента** (Google Trends — наша переменная) и **фондового рынка** (r_sp500 — наша переменная).
+– Поддерживает оба гипотетических блока: крипто-специфические (технологические, внимание) и внешние (S&P 500, VIX).
+– Методологическое сравнение: мы используем OLS+Newey-West; авторы — байесовский LASSO. Сходимость результатов усиливает доверие к выводам.

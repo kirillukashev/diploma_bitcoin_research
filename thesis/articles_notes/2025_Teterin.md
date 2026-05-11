@@ -1,43 +1,48 @@
 ---
 id: 2025_Teterin
-title: "Can Ethereum predict Bitcoin’s volatility?"
+title: "Can Ethereum predict Bitcoin's volatility?"
 citation_short: "Тетерин М.А., Пересецкий А.А. (2025)"
 group: russian
 pdf: "../../.local/articles/2025_Teterin_eth_predicts_btc_volatility.pdf"
-core: false  # отметить true, если статья войдёт в основной список (≥10 шт.)
+core: false
 ---
 
-# Тетерин М.А., Пересецкий А.А. (2025) — Can Ethereum predict Bitcoin’s volatility?
+# Тетерин, Пересецкий (2025) — Can Ethereum predict Bitcoin's volatility?
 
 **PDF:** [`.local/articles/2025_Teterin_eth_predicts_btc_volatility.pdf`](../../.local/articles/2025_Teterin_eth_predicts_btc_volatility.pdf)
-**Тематическая группа:** `russian` (см. `docs/articles/README.md`).
-
-## Аннотация (из метаданных PDF)
-
-HAR-RV модели с экзогенными переменными для прогноза реализованной волатильности BTC. Использование волатильности ETH как предиктора BTC и наоборот; анализ spillover-эффектов.
+**Источник:** Прикладная эконометрика, Т. 77, 2025. С. 74–90. DOI: 10.22394/1993-7601-2025-77-74-90
+**Тематическая группа:** `russian`
 
 ## Тип работы
 
-<!-- empirical / theoretical / survey / review -->
+Эмпирическая; прогнозирование реализованной волатильности.
 
 ## Вопрос исследования
 
-<!-- 1-2 предложения, что именно изучают авторы -->
+Улучшает ли добавление волатильности ETH в модель прогноза точность прогноза волатильности BTC, и наоборот?
 
 ## Метод
 
-<!-- регрессия / GARCH / quantile / event-study / GMM / Bayesian / ... -->
-<!-- частота данных, выборка, период -->
+– Высокочастотные данные BTC и ETH, 01.01.2018 — 23.06.2024.
+– Реализованная волатильность (RV) с 5-минутным интервалом.
+– Базовая модель: HAR-RV (Heterogeneous Autoregressive Realized Volatility).
+– Расширенные модели: HAR-RV + экзогенные переменные другой крипты; VAR-HAR-RV (векторная модель).
+– Rolling window, >2000 out-of-sample прогнозов; сравнение по MCS (Model Confidence Set).
+– Функции потерь: MSE, QLIKE и др.
 
 ## Ключевые результаты
 
-<!-- что нашли (3-5 пунктов) -->
+– Волатильность ETH значимо улучшает прогноз RV для BTC (и наоборот).
+– MCS показывает, что расширенная модель превосходит базовую HAR-RV статистически значимо.
+– Эффект spillover: шоки волатильности одной крипты передаются другой.
+– VAR-HAR-RV дополнительно улучшает прогноз, подтверждая двустороннюю связь.
 
 ## Цитата для главы 1
 
-<!-- 1-2 предложения цитаты для использования при написании обзора -->
+> «The models which incorporate Bitcoin data show that Bitcoin's volatility significantly contributes to forecasts of Ethereum's volatility across different forecast horizons.»
 
 ## Связь с нашей работой
 
-<!-- какую гипотезу/блок главы поддерживает или опровергает -->
-<!-- какие переменные пересекаются с нашими -->
+– Показывает тесную связь между BTC и ETH: spillover-эффекты внутри крипторынка — это внутренний крипто-специфический фактор.
+– Методологически ближе к робастности нашей GARCH-модели, чем к основному анализу.
+– Актуальна для обзора литературы в блоке «внутренние факторы».

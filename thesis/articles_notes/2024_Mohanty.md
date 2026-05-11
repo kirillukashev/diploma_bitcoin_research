@@ -1,43 +1,48 @@
 ---
 id: 2024_Mohanty
 title: "Do Prediction Markets Forecast Cryptocurrency Volatility? Evidence from Kalshi"
-citation_short: "Mohanty H., Krishnamachari B. (2024)"
+citation_short: "Mohanty H., Krishnamachari B. (2024/2026)"
 group: sentiment
 pdf: "../../.local/articles/2024_Mohanty_kalshi_prediction_markets.pdf"
-core: false  # отметить true, если статья войдёт в основной список (≥10 шт.)
+core: false
 ---
 
-# Mohanty H., Krishnamachari B. (2024) — Do Prediction Markets Forecast Cryptocurrency Volatility? Evidence from Kalshi
+# Mohanty, Krishnamachari (2026) — Prediction Markets Kalshi и волатильность крипты
 
 **PDF:** [`.local/articles/2024_Mohanty_kalshi_prediction_markets.pdf`](../../.local/articles/2024_Mohanty_kalshi_prediction_markets.pdf)
-**Тематическая группа:** `sentiment` (см. `docs/articles/README.md`).
-
-## Аннотация (из метаданных PDF)
-
-Прогноз реализованной волатильности крипты по prediction-markets Kalshi. Каналы: monetary policy (KXFED), recession risk (KXRECSSNBER), inflation (KXCPI). BTC — через Fed; ETH/SOL/ADA/LINK — через CPI.
+**Источник:** Working Paper, USC Viterbi School of Engineering; arXiv:2604.01431, апрель 2026.
+**Тематическая группа:** `sentiment`
 
 ## Тип работы
 
-<!-- empirical / theoretical / survey / review -->
+Эмпирическая; прогнозирование реализованной волатильности по prediction-market сигналам.
 
 ## Вопрос исследования
 
-<!-- 1-2 предложения, что именно изучают авторы -->
+Содержат ли ежедневные изменения вероятностей на рынках предсказаний Kalshi информацию о будущей волатильности криптовалют (BTC, ETH, SOL и др.)?
 
 ## Метод
 
-<!-- регрессия / GARCH / quantile / event-study / GMM / Bayesian / ... -->
-<!-- частота данных, выборка, период -->
+– Ежедневные данные по 10 Kalshi event-сериям и 6 криптовалютам, январь 2023 — март 2026.
+– HAR-модели для реализованной волатильности (5-дневный горизонт прогноза).
+– Три канала: монетарная политика (KXFED), риск рецессии (KXRECSSNBER), инфляция (KXCPI).
+– Робастность: ортогонализация относительно Fed Funds futures, Treasury yields, Deribit IV.
+– Benjamini-Hochberg коррекция на множественное тестирование.
 
 ## Ключевые результаты
 
-<!-- что нашли (3-5 пунктов) -->
+– Fed-repricing (KXFED) предсказывает волатильность BTC in-sample (t=3.63, p<0.001), но нестабильно out-of-sample.
+– Recession risk (KXRECSSNBER) стабильно out-of-sample: MSFE=0.979, p=0.020.
+– Inflation channel (KXCPI) предсказывает волатильность альткоинов (ETH, SOL, ADA, LINK).
+– BTC реагирует на монетарную политику; альткоины — на инфляцию.
 
 ## Цитата для главы 1
 
-<!-- 1-2 предложения цитаты для использования при написании обзора -->
+> «Bitcoin volatility is governed by institutional investors reacting to monetary policy expectations, and altcoin volatility by retail participants navigating inflation regime uncertainty.»
 
 ## Связь с нашей работой
 
-<!-- какую гипотезу/блок главы поддерживает или опровергает -->
-<!-- какие переменные пересекаются с нашими -->
+– Наиболее экзотичная статья в списке, методологически далеко от нашей работы.
+– Концептуально: монетарная политика (Fed) → VIX и r_sp500 как прокси в нашей работе.
+– Институциональная реакция на Fed-ожидания — объяснение растущей корреляции с S&P 500 в 2020–2025.
+– Можно упомянуть во введении как свидетельство зрелости крипторынка.

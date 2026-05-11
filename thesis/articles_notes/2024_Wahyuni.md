@@ -4,40 +4,41 @@ title: "US macroeconomic determinants of Bitcoin"
 citation_short: "Wahyuni M.T., Ridwan E., Salim D.F. (2024)"
 group: macro
 pdf: "../../.local/articles/2024_Wahyuni_us_macro_btc.pdf"
-core: false  # отметить true, если статья войдёт в основной список (≥10 шт.)
+core: false
 ---
 
-# Wahyuni M.T., Ridwan E., Salim D.F. (2024) — US macroeconomic determinants of Bitcoin
+# Wahyuni, Ridwan, Salim (2024) — Макродетерминанты Bitcoin в США
 
 **PDF:** [`.local/articles/2024_Wahyuni_us_macro_btc.pdf`](../../.local/articles/2024_Wahyuni_us_macro_btc.pdf)
-**Тематическая группа:** `macro` (см. `docs/articles/README.md`).
-
-## Аннотация (из метаданных PDF)
-
-Влияние американских макроэкономических переменных на BTC.
+**Источник:** Investment Management and Financial Innovations, 21(2), 2024. P. 240–252. DOI: 10.21511/imfi.21(2).2024.19
+**Тематическая группа:** `macro`
 
 ## Тип работы
 
-<!-- empirical / theoretical / survey / review -->
+Эмпирическая; DCC-MGARCH для анализа динамической корреляции BTC с макропеременными.
 
 ## Вопрос исследования
 
-<!-- 1-2 предложения, что именно изучают авторы -->
+Как американские макроэкономические переменные (инфляция, процентные ставки, курс USD/EUR, цена золота) влияют на цену Bitcoin?
 
 ## Метод
 
-<!-- регрессия / GARCH / quantile / event-study / GMM / Bayesian / ... -->
-<!-- частота данных, выборка, период -->
+– Ежемесячные данные, 2017–2022.
+– Dynamic Conditional Correlation (DCC) + Multivariate GARCH (MGARCH).
+– Переменные: CPI (inflation), Fed funds rate, USD/EUR, gold price, bitcoin price.
 
 ## Ключевые результаты
 
-<!-- что нашли (3-5 пунктов) -->
+– **Инфляция, процентные ставки и курс USD/EUR отрицательно** и значимо связаны с ценой BTC.
+– **Цена золота положительно** связана с ценой BTC.
+– DCC подтверждает, что корреляции не постоянны: они меняются со временем.
 
 ## Цитата для главы 1
 
-<!-- 1-2 предложения цитаты для использования при написании обзора -->
+> «There is a negative and significant relationship between the variables of inflation, interest rates, and USD/EUR rates affecting the price of Bitcoin... Conversely, there is a positive and significant relationship between the price of gold and the price of Bitcoin.»
 
 ## Связь с нашей работой
 
-<!-- какую гипотезу/блок главы поддерживает или опровергает -->
-<!-- какие переменные пересекаются с нашими -->
+– Отрицательная связь USD с BTC → наша переменная `r_dxy` (индекс доллара): ожидаемый знак совпадает.
+– Инфляция → VIX как более широкий прокси неопределённости в нашей работе.
+– Поддерживает включение внешних макрофакторов в модель — обосновывает наш внешний блок.
