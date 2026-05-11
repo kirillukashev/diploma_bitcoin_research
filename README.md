@@ -218,9 +218,3 @@ diploma_bitcoin_research/
 6. [notebooks/06_quantile_regression.ipynb](notebooks/06_quantile_regression.ipynb)
 
 Если используется уже подготовленный датасет [data/processed/merged_weekly.csv](data/processed/merged_weekly.csv), можно начинать с EDA и регрессионного анализа (шаги 2–6).
-
-## Литературная основа
-
-- Liu, Y., Tsyvinski, A. *Risks and Returns of Cryptocurrency*. *The Review of Financial Studies*.
-- Шилова Н.А., Зубарев Н.Ю. *Факторные модели доходности криптовалют: подход финансовой теории*.
-- Shynkevich et al. *Bitcoin as a financial asset: a survey*.
